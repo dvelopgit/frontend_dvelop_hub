@@ -6,29 +6,63 @@
     margin-bottom: 30px;
     transition: all .2s ease-in-out;
     overflow: hidden;
-    img {
-        max-width: 100%;
-    }
     &:hover {
         box-shadow: 0 0 5px $card-box-shadow-color;
         border: 1px solid $card-border-color-hover;
         z-index: 9999;
-        .card-block {
-            border-top: 1px solid $card-border-color-hover;
+        @include MQ(S) {
+            .card-block {
+                border-top: 1px solid $card-border-color-hover;
+            }
         }
     }
-    .card-img {
+    figure {
         position: relative;
-        &:after {
-            content: '';
-            position: absolute;
-            bottom: 1px;
+        display: table-cell;
+        vertical-align: top;
+        width: 100px;
+        min-width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-right: 1px solid $card-border-color;
+        @include MQ(S) {
             display: block;
-            height: 80px;
-            width: 100%;
-            background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.07)), color-stop(50%, transparent));
-            background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.07), transparent 50%);
-            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.07), transparent 50%);
+            border-right: 0;
+            width: auto;
+            height: auto;
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 1px;
+                display: block;
+                height: 80px;
+                width: 100%;
+                background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.07)), color-stop(30%, transparent));
+                background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.07), transparent 30%);
+                background-image: linear-gradient(to top, rgba(0, 0, 0, 0.07), transparent 30%);
+                z-index: 9999;
+            }
+        }
+    }
+    img {
+        position: absolute;
+        margin: 0 auto;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: auto;
+        z-index: 9;
+        @include MQ(S) {
+            position: relative;
+            -webkit-transform: translate(0%, 0%);
+            -ms-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+            top: 0%;
+            left: 0%;
+            max-width: 100%;
         }
     }
     a {
@@ -39,14 +73,29 @@
     }
     .card-block {
         padding: 1.25rem;
-        border-top: 1px solid $card-border-color;
+        display: table-cell;
+        vertical-align: middle;
+        width: 100%;
+        @include MQ(S) {
+            display: block;
+            border-top: 1px solid $card-border-color;
+        }
     }
     .card-title {
-        margin-bottom: .75rem;
+        margin: 0;
+        @include MQ(XS) {
+            margin-bottom: .75rem;
+        }
     }
     .card-title,
     .card-text {
         color: $copy-color;
         text-align: left;
+    }
+    .card-text {
+        display: none;
+        @include MQ(S) {
+            display: block;
+        }
     }
 }
