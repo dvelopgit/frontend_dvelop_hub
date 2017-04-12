@@ -1,0 +1,20 @@
+.navbar {
+	background: $brand-color;
+	border: none;
+	border-radius: 0;
+
+	.navbar-brand {
+		height: inherit
+	}
+
+	.navbar-collapse {
+		margin-top: 18px;
+	}
+	.navbar-nav>li>a {
+		color: $copy-color-inverse;
+
+		&:hover {
+		color: $copy-color-inverse-hover;
+	}
+	}
+}

@@ -1,0 +1,20 @@
+{
+  "name": "frontend_dvelop_hub",
+  "description": "A simple way to kick start gulp based web app projects.",
+  "main": "index.js",
+  "authors": [
+    "Sebastian Gonzalez <sg.gonzalezg@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#^3.3.7"
+  }
+}

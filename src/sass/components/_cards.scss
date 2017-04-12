@@ -1,0 +1,37 @@
+.card {
+    position: relative;
+    background-color: $card-background;
+    border: 1px solid $card-border-color;
+    border-radius: .25rem;
+    margin-bottom: 30px;
+    min-height: 290px;
+    transition: all .2s ease-in-out;
+    img {
+        max-width: 100%;
+    }
+    &:hover {
+        box-shadow: 1px 1px 0 $card-box-shadow-color;
+        transform: scale(1.01);
+        z-index: 9999;
+    }
+    a {
+        &:hover,
+        &:focus {
+            text-decoration: none;
+        }
+    }
+}
+
+.card-block {
+    padding: 1.25rem;
+    border-top: 1px solid $card-border-color;
+}
+
+.card-title {
+    margin-bottom: .75rem;
+}
+
+.card-title,
+.card-text {
+    color: $copy-color;
+}
