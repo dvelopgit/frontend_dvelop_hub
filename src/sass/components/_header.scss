@@ -21,6 +21,9 @@
     }
     .navbar-nav .open .dropdown-menu>li>a {
         color: #FFF;
+        @include MQ(S) {
+            color: $copy-color;
+        }
     }
     @include MQ(S) {
         .nav > li > .dropdown-menu::before {
