@@ -2,13 +2,13 @@
     vertical-align: middle;
     img {
         @include MQ(M) {
-            width: 50%;
+            height: 50%;
         }
     }
     &:last-child {
         text-align: center;
         @include MQ(M) {
-            text-align: right;
+            text-align: left;
         }
     }
     .table-action {

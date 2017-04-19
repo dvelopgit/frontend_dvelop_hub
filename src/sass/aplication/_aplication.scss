@@ -4,11 +4,17 @@
         font-size: 14px;
         font-weight: bold;
         color: $title-color;
-        line-height: 33px;
+        line-height: 31px;
         margin-bottom: 0;
     }
     .btn-group>.btn {
         font-size: 12px;
+    }
+    .col-xs-12:first-child {
+    	margin-bottom: $spacing-middle;
+        @include MQ(M) {
+        	margin-bottom: 0;
+        }
     }
     .hidden-xs {
         button {
