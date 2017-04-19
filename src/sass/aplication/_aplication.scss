@@ -1,0 +1,42 @@
+.header-aplication {
+    margin-bottom: $spacing-middle;
+    .title {
+        font-size: 14px;
+        font-weight: bold;
+        color: $title-color;
+        line-height: 33px;
+        margin-bottom: 0;
+    }
+    .btn-group>.btn {
+        font-size: 12px;
+    }
+    .hidden-xs {
+        button {
+            border-width: 0
+        }
+        table {
+            @include MQ(M) {
+                float: right;
+            }
+        }
+    }
+    select {
+        margin-left: 5px;
+        width: auto !important;
+    }
+    span {
+        padding-left: 8px;
+        padding-right: 2px;
+    }
+    input {
+        width: 125px;
+        margin-left: 5px;
+    }
+    td:last-child {
+        padding-left: 5px;
+    }
+}
+
+.pagination-container {
+    text-align: right;
+}

@@ -1,1 +1,6 @@
-@import 'colors'
+@import 'colors';
+
+// Spacing
+$spacing-small: 15px;
+$spacing-middle: $spacing-small * 2;
+$spacing-large: $spacing-small * 4;

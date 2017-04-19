@@ -6,13 +6,14 @@
     <title>Dvelop Hub Center</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
 </head>
 
 <body>
-    {{> components/header}}
     <section>
+        {{> components/header}}
+        
         <div class="container">
             <div class="row">
                 {{>components/card img_src="img/AuditPlus.png" img_alt="AuditPlus logo" title="AuditPlus - Help" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quis eros molestie, pretium risus vitae, aliquet eros. Sed gravida laoreet diam, quis ultrices ante commodo auctor. Duis at nunc tortor."}}
@@ -50,8 +51,8 @@
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/scripts/main.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 </body>
 
 </html>

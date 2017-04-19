@@ -1,9 +1,22 @@
+.card-container {
+    width: 100%;
+    padding: 0 $spacing-small;
+    vertical-align: top;
+    @include MQ(XS) {
+        width: calc(100% / 3 - 6px / 1.5);
+        display: inline-block;
+    }
+    @include MQ(M) {
+        width: calc(100% / 4 - 8px / 2);
+    }
+}
+
 .card {
     position: relative;
     background-color: $card-background;
     border: 1px solid $card-border-color;
     border-radius: .25rem;
-    margin-bottom: 30px;
+    margin-bottom: $spacing-middle;
     transition: all .2s ease-in-out;
     overflow: hidden;
     &:hover {
@@ -25,11 +38,12 @@
         height: 100px;
         overflow: hidden;
         border-right: 1px solid $card-border-color;
-        @include MQ(S) {
+        @include MQ(XS) {
             display: block;
             border-right: 0;
             width: auto;
             height: auto;
+            text-align: center;
             &:after {
                 content: '';
                 position: absolute;
@@ -55,7 +69,7 @@
         width: 100%;
         height: auto;
         z-index: 9;
-        @include MQ(S) {
+        @include MQ(XS) {
             position: relative;
             -webkit-transform: translate(0%, 0%);
             -ms-transform: translate(0%, 0%);
@@ -63,9 +77,11 @@
             top: 0%;
             left: 0%;
             max-width: 100%;
+            width: auto;
         }
     }
     a {
+        display: block;
         &:hover,
         &:focus {
             text-decoration: none;
@@ -76,7 +92,7 @@
         display: table-cell;
         vertical-align: middle;
         width: 100%;
-        @include MQ(S) {
+        @include MQ(XS) {
             display: block;
             border-top: 1px solid $card-border-color;
         }
@@ -85,6 +101,11 @@
         margin: 0;
         @include MQ(XS) {
             margin-bottom: .75rem;
+        }
+        @include MQ(S) {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
     .card-title,

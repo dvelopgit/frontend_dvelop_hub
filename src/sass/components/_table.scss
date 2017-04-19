@@ -1,0 +1,28 @@
+.table>tbody>tr>td {
+    vertical-align: middle;
+    img {
+        @include MQ(M) {
+            width: 50%;
+        }
+    }
+    &:last-child {
+        text-align: center;
+        @include MQ(M) {
+            text-align: right;
+        }
+    }
+    .table-action {
+        display: block;
+        margin: auto;
+        text-align: center;
+        padding: 5px;
+        border-radius: 50%;
+        background: $table-links-background;
+        width: 45px;
+        height: 45px;
+        line-height: 35px;
+        &:hover {
+            background: $table-links-background-hover;
+        }
+    }
+}

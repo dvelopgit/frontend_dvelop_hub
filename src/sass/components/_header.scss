@@ -1,20 +1,54 @@
 .navbar {
-	background: $brand-color;
-	border: none;
-	border-radius: 0;
-
-	.navbar-brand {
-		height: inherit
-	}
-
-	.navbar-collapse {
-		margin-top: 18px;
-	}
-	.navbar-nav>li>a {
-		color: $copy-color-inverse;
-
-		&:hover {
-		color: $copy-color-inverse-hover;
-	}
-	}
+    background: $brand-color;
+    border: none;
+    border-radius: 0;
+    .navbar-brand {
+        height: inherit
+    }
+    .navbar-nav {
+        margin-top: 12px;
+    }
+    .navbar-nav>li>a {
+        color: $copy-color-inverse;
+        &:hover {
+            color: $copy-color-inverse-hover;
+        }
+    }
+    .navbar-nav .open > a,
+    .navbar-nav>.open>a:focus {
+        background-color: $brand-color;
+        color: $copy-color-inverse;
+    }
+    .navbar-nav .open .dropdown-menu>li>a {
+        color: #FFF;
+    }
+    @include MQ(S) {
+        .nav > li > .dropdown-menu::before {
+            position: absolute;
+            top: -7px;
+            right: 22px;
+            display: inline-block;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #CCC;
+            border-left: 7px solid transparent;
+            border-bottom-color: rgba(0, 0, 0, 0.2);
+            content: '';
+        }
+        .nav > li > .dropdown-menu::after {
+            position: absolute;
+            top: -6px;
+            right: 23px;
+            display: inline-block;
+            border-right: 6px solid transparent;
+            border-bottom: 6px solid white;
+            border-left: 6px solid transparent;
+            content: '';
+        }
+    }
+    .navbar-toggle {
+        margin-top: 26px;
+        .icon-bar {
+            background-color: $menu-background;
+        }
+    }
 }

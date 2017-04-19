@@ -1,23 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Dvelop Hub Center</title>
+    <meta charset="UTF-8">
+    <title>Dvelop Hub Center</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="/css/style.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
 </head>
-<body>
-	{{> components/aplication/header}}
-	<section>
-	    <div class="container">
-            
-        </div>
-	</section>
 
+<body>
+    <section class="aplication">
+        {{> components/aplication/header}}
+        <div class="container">
+            <div class="row">
+                <div class="header-aplication clearfix">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <p class="title">Aplicación</p>
+                            </div>
+                            <div class="col-sm-9">
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn btn-default">Insert</button>
+                                    <button type="button" class="btn btn-default">Excel</button>
+                                    <button type="button" class="btn btn-default">PDF</button>
+                                    <button type="button" class="btn btn-default">Select columns</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 hidden-sm">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <button class="btn btn-default butt">
+                                                    <img src="img/Icon-Filter.png" alt="Icon Filter">
+                                                </button>
+                                            </td>
+                                            <td>
+                                                <span>Search in</span>
+                                            </td>
+                                            <td>
+                                                <div>
+                                                    <select class="form-control">
+                                                        <option>Nombre</option>
+                                                        <option>2</option>
+                                                        <option>3</option>
+                                                        <option>4</option>
+                                                        <option>5</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span>value</span>
+                                            </td>
+                                            <td>
+                                                <select class="form-control">
+                                                    <option>Stars with</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control">
+                                            </td>
+                                            <td>
+                                                <img src="img/Icon-Plus.png" alt="Icon Plus">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{> components/aplication/table}}
+            <div class="pagination-container">
+                {{> components/aplication/pagination}}
+            </div>
+        </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="/scripts/main.js"></script>
-    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 </body>
+
 </html>

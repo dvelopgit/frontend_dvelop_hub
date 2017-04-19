@@ -4,9 +4,17 @@ $brand-color: #078bcd;
 $copy-color: #333;
 $copy-color-inverse: #EEE;
 $copy-color-inverse-hover: lighten($copy-color-inverse, 4);
+$title-color: #4d4d4d;
 
 // Card
 $card-background: #FFF;
 $card-border-color: rgba(0,0,0,.125);
 $card-border-color-hover: rgba(0,0,0,.325);
 $card-box-shadow-color: rgba(0,0,0,.2);
+
+// Table links
+$table-links-background: #eee;
+$table-links-background-hover:darken($table-links-background, 4);
+
+// Header
+$menu-background: #FFF;
